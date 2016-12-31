@@ -6,19 +6,12 @@
 #--------Imports--------
 import random
 
-#-------- Roll Dice --------
+#-------- Functions --------
 
-for x in range(1,4):
-    roll = random.randint(1,6)
-    if roll >=1 and roll <=3:
-        result = "H"
-    elif roll == 4:
-        result = "L"
-    elif roll == 5:
-        result = "R"
-    else:
-        if roll == 6:
-            result = "C"
-    print(result)
+def rollDice(number): # number is the number of dice the user is allowed to roll
+    for x in range(1,number + 1):
+        roll = random.randint(1,6)
+        print(roll)
+        #return roll
 
-    
+rollDice(1)
