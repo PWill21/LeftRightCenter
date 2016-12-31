@@ -1,11 +1,13 @@
 # Left Right Center
 # Program: lrc.py
 # Name: Patrick Will
-# Date: 12/27/2016
-#
-#-------- Roll Dice --------
-#
+# Date: 12/30/2016
+
+#--------Imports--------
 import random
+
+#-------- Roll Dice --------
+
 for x in range(1,4):
     roll = random.randint(1,6)
     if roll >=1 and roll <=3:
@@ -18,5 +20,5 @@ for x in range(1,4):
         if roll == 6:
             result = "C"
     print(result)
-#-------- Create Die --------
+
     
