@@ -22,4 +22,9 @@ def rollDice(number): # number is the number of dice the user is allowed to roll
         print(result)
         #return result
 
+#-------- End Functions --------
+
+number_of_players = int(input("How many people are playing? "))
+total_pot = str((number_of_players * 3))
+print("That's a total of $" + total_pot + " for the winner!")        
 rollDice(3)
