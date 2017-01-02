@@ -7,9 +7,9 @@
 import random
 
 #-------- Variables --------
-player_list = []
+player_list = [] # stores name of each player in a list
 number_of_players = 0
-playerTotal = []
+playerTotal = [] #stores current amount for each player in a list
 
 #-------- Functions --------
 
@@ -40,10 +40,10 @@ def displayPlayerNames(n):
     print(n)
     return
 
-def assignTotals(t):
+def assignTotals(t): # adds an ititial amount of 3 to each players current total
     for x in range(1,len(t) + 1):
         playerTotal.append(3)
-        print(playerTotal)
+    print(playerTotal)
     return
 #-------- End Functions --------
 
