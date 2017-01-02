@@ -31,6 +31,6 @@ def enterPlayerName(): #prompts each user to enter their name
 
 number_of_players = int(input("How many people are playing? "))
 total_pot = str((number_of_players * 3))
-print("That's a total of $" + total_pot + " for the winner!")        
+print ("That's a total of $%s for the winner!" % (total_pot))      
 enterPlayerName()
-#rollDice(3)
+rollDice(3)
