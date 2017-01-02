@@ -9,6 +9,7 @@ import random
 #-------- Variables --------
 player_list = []
 number_of_players = 0
+playerTotal = []
 
 #-------- Functions --------
 
@@ -38,11 +39,18 @@ def enterPlayerNames(): #prompts each user to enter their name
 def displayPlayerNames(n):
     print(n)
     return
+
+def assignTotals(t):
+    for x in range(1,len(t) + 1):
+        playerTotal.append(3)
+        print(playerTotal)
+    return
 #-------- End Functions --------
 
 
 enterPlayerNames()
 displayPlayerNames(player_list)
+assignTotals(player_list)
 rollDice(3)
 
 
