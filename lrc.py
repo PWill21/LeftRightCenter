@@ -8,8 +8,10 @@ import random
 
 #-------- Variables --------
 player_list = []
+number_of_players = 0
 
 #-------- Functions --------
+
 
 def rollDice(number): # number is the number of dice the user is allowed to roll
     for x in range(1,number + 1):
@@ -25,8 +27,10 @@ def rollDice(number): # number is the number of dice the user is allowed to roll
         print(result)
     return
 
-def enterPlayerName(): #prompts each user to enter their name
-    #player_list = []
+def enterPlayerNames(): #prompts each user to enter their name
+    number_of_players = int(input("How many people are playing? "))
+    total_pot = str((number_of_players * 3))
+    print ("That's a total of $%s for the winner!" % (total_pot))  
     for x in range(1,number_of_players + 1):
         player_list.append(input("Type your name and press Enter: "))
     return player_list
@@ -34,15 +38,12 @@ def enterPlayerName(): #prompts each user to enter their name
 def displayPlayerNames(n):
     print(n)
     return
-    
-    
 #-------- End Functions --------
 
-number_of_players = int(input("How many people are playing? "))
-total_pot = str((number_of_players * 3))
-print ("That's a total of $%s for the winner!" % (total_pot))      
-enterPlayerName()
-rollDice(3)
+
+enterPlayerNames()
 displayPlayerNames(player_list)
+rollDice(3)
+
 
 
