@@ -20,13 +20,13 @@ def rollDice(number): # number is the number of dice the user is allowed to roll
         else:
             result = "Center"
         print(result)
-        #return result
+    return
 
 def enterPlayerName(): #prompts each user to enter their name
     player_list = []
     for x in range(1,number_of_players + 1):
         player_list.append(input("Type your name and press Enter: "))
-
+    return
     
 #-------- End Functions --------
 
@@ -35,3 +35,4 @@ total_pot = str((number_of_players * 3))
 print ("That's a total of $%s for the winner!" % (total_pot))      
 enterPlayerName()
 rollDice(3)
+
