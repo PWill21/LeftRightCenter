@@ -23,10 +23,11 @@ def rollDice(number): # number is the number of dice the user is allowed to roll
         #return result
 
 def enterPlayerName(): #prompts each user to enter their name
+    player_list = []
     for x in range(1,number_of_players + 1):
-        name = input("Type your name and press Enter: ")
-    
+        player_list.append(input("Type your name and press Enter: "))
 
+    
 #-------- End Functions --------
 
 number_of_players = int(input("How many people are playing? "))
