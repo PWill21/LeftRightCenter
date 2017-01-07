@@ -1,7 +1,7 @@
 # Left Right Center
 # Program: lrc.py
 # Name: Patrick Will
-# Date: 12/30/2016
+# Date: 1/6/2016
 
 #--------Imports--------
 import random
@@ -10,11 +10,14 @@ import random
 player_list = [] # stores name of each player in a list
 number_of_players = 0
 player_total_amounts = [] #stores current amount for each player in a list
+current_player = ""
 
 #-------- Functions --------
 
 
 def rollDice(number): # number is the number of dice the user is allowed to roll
+    current_player = player_list[0]
+    print(str(player_list[0]) +" rolls:")
     for x in range(1,number + 1):
         roll = random.randint(1,6)
         if (roll >=1) and (roll <= 3):
@@ -44,7 +47,7 @@ def assignTotals(t): # adds an ititial amount of 3 to each players current total
     for x in range(1,len(t) + 1):
         player_total_amounts.append(3)
     print(player_total_amounts)
-    return
+    return player_total_amounts
 #-------- End Functions --------
 
 
