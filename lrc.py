@@ -16,19 +16,25 @@ current_player = ""
 
 
 def rollDice(number): # number is the number of dice the user is allowed to roll
-    current_player = player_list[0]
-    print(str(player_list[0]) +" rolls:")
+    x = 1
+    current_player = player_list[x-1]
+    print(str(player_list[x-1]) +" rolls:")
     for x in range(1,number + 1):
         roll = random.randint(1,6)
         if (roll >=1) and (roll <= 3):
             result = "Hold"
         elif roll == 4:
             result = "Left"
+            #player_total_amounts[x] += 1 # this adds 1 to the amount of the player to the left of the current player
         elif roll == 5:
             result = "Right"
+            #player_total_amounts[x+1] += 1 # this add 1 to the amount of the player to the right of the current player
         else:
             result = "Center"
+            #player_total_amounts[x-1] -= 1
+            # placeholder to add 1 to the current pot
         print(result)
+    print(player_total_amounts)
     return
 
 def enterPlayerNames(): #prompts each user to enter their name
@@ -46,7 +52,7 @@ def displayPlayerNames(n): # n is the list of player name returned from the ente
 def assignTotals(t): # adds an ititial amount of 3 to each players current total
     for x in range(1,len(t) + 1):
         player_total_amounts.append(3)
-    print(player_total_amounts)
+    #print(player_total_amounts)
     return player_total_amounts
 #-------- End Functions --------
 
