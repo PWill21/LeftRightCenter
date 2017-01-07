@@ -39,7 +39,7 @@ def enterPlayerNames(): #prompts each user to enter their name
         player_list.append(input("Type your name and press Enter: "))
     return player_list
 
-def displayPlayerNames(n):
+def displayPlayerNames(n): # n is the list of player name returned from the enterPlayerNames() function
     print(n)
     return
 
